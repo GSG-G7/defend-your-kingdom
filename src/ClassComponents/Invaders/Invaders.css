@@ -1,6 +1,7 @@
 .invaders-box {
   min-height: 80%;
   display: block;
+  position: relative;
 }
 
 .invaders {
@@ -9,8 +10,9 @@
   grid-row-gap: 5px;
   justify-content: space-around;
   position: relative;
-  top: -30px;
+  top: 10px;
   z-index: -1;
+  position: relative;
 }
 
 .invader {
