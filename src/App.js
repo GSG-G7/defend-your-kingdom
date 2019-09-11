@@ -6,7 +6,8 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    position: 0
+    position: 0,
+    posFire: 0
   };
 
   componentDidMount() {
@@ -25,12 +26,12 @@ class App extends Component {
   }
 
   render() {
-    const { position } = this.state;
+    const { position, posFire } = this.state;
     return (
       <div className="App">
         <Header />
         <Invaders position={position} />
-        <Player />
+        <Player posFire={posFire} />
       </div>
     );
   }

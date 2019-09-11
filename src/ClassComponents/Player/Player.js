@@ -1,12 +1,21 @@
 import React from "react";
 import "./Player.css";
 
-const Player = () => {
-  return (
-    <div className="player-space">
-      <div className="player"></div>
-    </div>
-  );
-};
+export default class Player extends React.Component {
+  state = {
+    shoot: false
+  };
 
-export default Player;
+  shootFire = () => {
+    this.setState({ shoot: true });
+  };
+
+  render() {
+    return (
+      <div className="player-space">
+        <div onClick={this.shootFire} className="player"></div>
+        {this.state.shoot ? <div class="buttom-fire"></div> : null}
+      </div>
+    );
+  }
+}
