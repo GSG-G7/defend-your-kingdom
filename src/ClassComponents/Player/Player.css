@@ -12,3 +12,10 @@
   height: 80%;
   background-color: black;
 }
+
+.buttom-fire {
+  width: 10px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+}
