@@ -1,5 +1,4 @@
 import React from "react";
-// import AnimateInvaders from "./AnimateInvaders";
 import "./Invaders.css";
 
 export default class Invaders extends React.Component {
@@ -36,19 +35,3 @@ export default class Invaders extends React.Component {
     );
   }
 }
-
-// const Invaders = ({ position }) => {
-//   const invaders = Array.from(Array(15).keys());
-
-// return (
-//   <div className="invaders-box">
-//     <div className="invaders" style={{ top: position }}>
-//       {invaders.map(invader => (
-//         <div className="invader" key={invader}></div>
-//       ))}
-//     </div>
-//   </div>
-// );
-// };
-
-// export default Invaders;
