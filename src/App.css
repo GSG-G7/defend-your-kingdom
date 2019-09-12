@@ -7,7 +7,12 @@
 .App {
   width: 50%;
   margin: 2rem auto;
-  
+
   border: 1px solid black;
   height: 500px;
+}
+
+.game-body {
+  position: relative;
+  height: 90%;
 }

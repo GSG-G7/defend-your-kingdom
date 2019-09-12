@@ -6,32 +6,42 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    position: 0,
-    posFire: 0
+    // position: 0
+    // firePosition: 30
   };
 
-  componentDidMount() {
-    const { position } = this.state;
-    this.setState({ position });
-  }
+  // componentDidMount() {
+  //   const { position, firePosition } = this.state;
+  //   this.setState({ position });
+  //   this.setState({ firePosition });
+  // }
 
   componentDidUpdate(prevProps, prevState) {
-    setTimeout(() => {
-      if (prevState.position === 400) {
-        return;
-      } else {
-        this.setState({ position: prevState.position + 1 });
-      }
-    }, 20);
+    // setTimeout(() => {
+    //   if (prevState.position === 400) {
+    //     return;
+    //   } else {
+    //     this.setState({ position: prevState.position + 1 });
+    //   }
+    // }, 10);
+    // setTimeout(() => {
+    //   if (prevState.firePosition === 200) {
+    //     return;
+    //   } else {
+    //     this.setState({ firePosition: ++prevState.firePosition });
+    //   }
+    // }, 10);
   }
 
   render() {
-    const { position, posFire } = this.state;
+    // const { position, firePosition } = this.state;
     return (
       <div className="App">
         <Header />
-        <Invaders position={position} />
-        <Player posFire={posFire} />
+        <div className="game-body">
+          <Invaders />
+          <Player />
+        </div>
       </div>
     );
   }

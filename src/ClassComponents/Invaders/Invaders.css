@@ -1,7 +1,7 @@
 .invaders-box {
-  min-height: 80%;
+  min-height: 90%;
   display: block;
-  position: relative;
+  /* position: relative; */
 }
 
 .invaders {
