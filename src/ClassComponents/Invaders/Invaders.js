@@ -26,7 +26,7 @@ export default class Invaders extends React.Component {
     const invaders = Array.from(Array(15).keys());
     return (
       <div className="invaders-box">
-        <div className="invaders" style={{ top: position }}>
+        <div ref="anime" className="invaders" style={{ top: position }}>
           {invaders.map(invader => (
             <div className="invader" key={invader}></div>
           ))}

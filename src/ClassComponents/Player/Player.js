@@ -17,13 +17,16 @@ export default class Player extends React.Component {
   };
 
   handlePlayerMove = event => {
+    let pos = "";
     if (event.code === "ArrowRight") {
-      console.log("a");
-      return 50;
+      pos = this.state.playerPosition + 2;
     } else if (event.code === "ArrowLeft") {
-      console.log("c");
-      return 50;
+      pos = this.state.playerPosition - 2;
+    } else {
+      pos = this.state.playerPosition;
     }
+
+    this.setState({ playerPosition: pos });
   };
 
   componentDidMount() {
@@ -44,8 +47,8 @@ export default class Player extends React.Component {
   render() {
     const { firePosition } = this.state;
     return (
-      <div className="player-space">
-        <div onClick={this.shootFire} className="player" style={{ left: this.handlePlayerMove }}></div>
+      <div className="player-space" ref="playerSpace">
+        <div onClick={this.shootFire} className="player" style={{ left: `${this.state.playerPosition}%` }}></div>
         {this.state.shoot ? <div className="buttom-fire" style={{ bottom: firePosition }}></div> : null}
       </div>
     );
