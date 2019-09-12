@@ -6,7 +6,7 @@
 
 .invaders {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: repeat(15, auto);
   grid-row-gap: 5px;
   justify-content: space-around;
   position: relative;
