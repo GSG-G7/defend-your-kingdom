@@ -12,6 +12,7 @@
   width: 50px;
   height: 80%;
   background-color: white;
+  position: relative;
 }
 
 .buttom-fire {
